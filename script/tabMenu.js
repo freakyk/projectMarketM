@@ -4,20 +4,20 @@ class TabMenu extends HTMLElement {
         this.attachShadow({ mode: 'open' });
     }
     connectedCallback() {
-        let imgSrc;
+        let imgSrc = "/projectMarketM/"
         console.log(location.pathname)
-        if(location.pathname == "/" || location.pathname == "/index.html"){
-            imgSrc = "./";
+        if(location.pathname == "/projectMarketM/" || location.pathname == "/projectMarketM/index.html"){
+            // imgSrc = "./";
             this.shadowRoot.innerHTML = tabSrc(imgSrc, "active");
-        }else if(location.pathname == "/pages/chat/chatList.html"){
-            imgSrc = "../../";
+        }else if(location.pathname == "/projectMarketM/pages/chat/chatList.html"){
+            // imgSrc = "../../";
             this.shadowRoot.innerHTML = tabSrc(imgSrc,"","active");
-        }else if(location.pathname == "/pages/profile/follow.html" || location.pathname == "/pages/profile/index.html"){
+        }else if(location.pathname == "/projectMarketM/pages/profile/follow.html" || location.pathname == "/projectMarketM/pages/profile/index.html"){
             // 관리자, 회원, 비회원 쪼개기
-            imgSrc = "../../";
+            // imgSrc = "../../";
             this.shadowRoot.innerHTML = tabSrc(imgSrc,"","","","active");
         }else{
-            imgSrc = "../../";
+            // imgSrc = "../../";
             this.shadowRoot.innerHTML = tabSrc(imgSrc, "active");
         }
     }
