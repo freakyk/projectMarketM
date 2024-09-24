@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <header id="header" class="profile">
+        <span class="back"><a href="javascript:history.go(-1);"><img src="../../img/icon/icon-arrow-left.png" alt="search"></a></span>
+        <button class="btnMS btnCustom" disabled>저장</button>
+    </header>
+
+    <div id="contents">
+        <div class="profileWrap">
+            <!-- 프로필 수정폼 -->
+            <div class="modifyForm customForm pd35">
+                <div class="userImg">
+                    <label for="userimg">
+                        <input type="file" name="userimg" id="userimg">
+                        <img src="../../img/basic-profile-img.png" alt="basic profile img">
+                    </label>
+                </div>
+                <label for="username" class="formlabel username">
+                    사용자 이름
+                    <input type="text" name="username" id="username" placeholder="2~10자 이내여야 합니다.">
+                </label>
+                <label for="id" class="formlabel id">
+                    계정 ID
+                    <input type="text" name="id" id="id" placeholder="영문, 숫자, 특수문자(.),(_)만 사용 가능합니다.">
+                </label>
+                <label for="intro" class="formlabel intro">
+                    소개
+                    <input type="text" name="intro" id="intro" placeholder="자신과 판매할 상품에 대해 소개해 주세요!">
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <header id="header" class="prd">
+        <span class="back"><a href="javascript:history.go(-1);"><img src="../../img/icon/icon-arrow-left.png" alt="search"></a></span>
+        <button class="btnMS btnCustom" disabled>저장</button>
+    </header>
+
+    <div id="contents">
+        <div class="prdWrap">
+            <!-- 상품등록폼 -->
+            <div class="prdForm customForm pd35">
+                <div class="prdImg">
+                    <label for="prdimg" class="formlabel prdimg">
+                        이미지 등록
+                        <input type="file" name="prdimg" id="prdimg">
+                        <img src="../../img/basic-prdThumb.png" alt="basic prd img">
+                    </label>
+                </div>
+                <label for="prdname" class="formlabel prdname">
+                    상품명
+                    <input type="text" name="prdname" id="prdname" placeholder="2~15자 이내여야 합니다.">
+                </label>
+                <label for="price" class="formlabel price">
+                    가격
+                    <input type="text" name="price" id="price" placeholder="숫자만 입력 가능합니다.">
+                </label>
+                <label for="prdlink" class="formlabel prdlink">
+                    판매 링크
+                    <input type="text" name="prdlink" id="prdlink" placeholder="URL을 입력해 주세요.">
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../script/script.js"></script>
+</body>
+</html>

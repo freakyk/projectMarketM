@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../script/tabMenu.js"></script>
+</head>
+<body>
+    <header id="header" class="profile hasmenu">
+        <span class="back"><a href="javascript:history.go(-1);"><img src="../../img/icon/icon-arrow-left.png" alt="search"></a></span>
+        <div class="moremenu"><img src="../../img/icon/icon-more-vertical.png" alt="more menu"></div>
+    </header>
+
+    <div id="contents">
+        <div id="profileList">
+            <div class="profileIntro proSec">
+                <div class="ddd" style="height:300px">프로필 소개</div>
+            </div>
+            <div class="profilePrd proSec">
+                <div class="ddd" style="height:200px">판매중인상품</div>
+            </div>
+            <div class="profileBoard proSec">
+                <div class="boardWrap">
+                    <ul class="boardTab">
+                        <li class="active list"><img src="../../img/icon/icon-post-list-off.png" alt="list" class="off"><img src="../../img/icon/icon-post-list-on.png" alt="list" class="on"></li>
+                        <li class="album"><img src="../../img/icon/icon-post-album-off.png" alt="gallery" class="off"><img src="../../img/icon/icon-post-album-on.png" alt="gallery" class="on"></li>
+                    </ul>
+                    <ul class="boardDetail">
+                        <li>
+                            <div class="ddd" style="height:300px">게시물1</div>
+                        </li>
+                        <li>
+                            <div class="ddd" style="height:300px">게시물2</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 탭메뉴 -->
+    <custom-tab class="tabMenu"></custom-tab> 
+
+    <script src="../../script/script.js"></script>
+</body>
+</html>
