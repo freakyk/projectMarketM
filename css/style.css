@@ -20,6 +20,7 @@ a, a:focus{text-decoration: none;color:inherit;background: inherit;}
 img{max-width:100%;}
 
 /* custom ---------------------------------------- */
+body{min-width: 320px;}
 .displaynone{display: none !important;}
 .ddd{width:100%;height:100dvh;display:flex;align-items: center;justify-content: center;font-size:20px;color:gray;background: #e0e0e0;}
 
@@ -117,15 +118,55 @@ input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:activ
 
         /* comment */
         #boardDetail{max-height: calc(100dvh - 108px);overflow-y: auto;}
-        #boardDetail .boardArea .boardInfo{padding:20px 15px 25px;}
 
-
-
-
+        #boardDetail #feedList .list .imgArea{position:relative;margin:0 0 15px;}
+        #boardDetail #feedList .list .imgArea ul{flex-direction: initial;padding:0;overflow: hidden;overflow:initial;align-items: baseline;}
+        #boardDetail #feedList .list .imgArea ul > li{height:auto;flex:none;margin:0;}
+        #boardDetail #feedList .list .imgArea ul > li div > img{border:none;}
+        #boardDetail #feedList .list .imgArea .postPag{position: absolute;left:50%;bottom:10px;top:auto;transform: translateX(-50%);z-index: 1;display:flex;align-items: center;justify-content: center;padding:0;}
+        #boardDetail #feedList .list .imgArea .postPag span{opacity:1;margin:0 3px;width:6px;height:6px;border-radius: 50%;background:white;transition: 0.1s;}
+        #boardDetail #feedList .list .imgArea .postPag span.swiper-pagination-bullet-active{background: var(--color-primary);}
+        
         #boardDetail .boardArea .comInfo{border-top:1px solid var(--color-txt4)}
-        #boardDetail .boardArea .comInfo ul{display: flex;flex-direction: column;padding:10px 0;}
-        #boardDetail .boardArea .comInfo ul li{padding:8px 15px;}
+        #boardDetail .boardArea .comInfo ul{display: flex;flex-direction: column;padding:13px 0;}
+        #boardDetail .boardArea .comInfo ul li{padding:8px 15px;background: beige;}
         #boardDetail .boardArea .comInfo ul li + li{}
+
+        #boardDetail .boardArea .comInfo ul li{padding:8px 15px;background: white;}
+        #boardDetail .boardArea .comInfo ul li .comInner{display: flex;}
+        #boardDetail .boardArea .comInfo ul li .comInner .userImg{flex-shrink: 0;margin-right:16px;}
+        #boardDetail .boardArea .comInfo ul li .comInner .userImg img{width:36px;height:36px;border-radius: 50%;overflow: hidden;display: block;}
+        #boardDetail .boardArea .comInfo ul li .comInner .comDetail{overflow:hidden;width:100%;}
+        #boardDetail .boardArea .comInfo ul li .comInner .comDetail .userArea{display:flex;align-items: flex-start;justify-content: space-between;}
+        #boardDetail .boardArea .comInfo ul li .comInner .comDetail .userArea a{display:flex;align-items: baseline;}
+        #boardDetail .boardArea .comInfo ul li .comInner .comDetail .userArea .userName{font-weight: 500;font-size:14px;color:black;line-height: 1.3;padding:6px 0 0}
+        #boardDetail .boardArea .comInfo ul li .comInner .comDetail .userArea .uploadDate{font-size:10px;color:var(--color-txt1);margin-left:5px;flex-shrink: 0;position: relative;top:-1px}
+        #boardDetail .boardArea .comInfo ul li .comInner .comDetail .userArea .moreInfo{flex-shrink: 0;position:relative;right:-2px;}
+        #boardDetail .boardArea .comInfo ul li .comInner .comDetail .userArea .moreInfo img{width:20px;}
+        #boardDetail .boardArea .comInfo ul li .comInner .comDetail .txtArea{padding:15px 10px 0 0;font-size:14px;color:black;line-height: 1.4;;border:none;width:auto;}
+        #boardDetail .boardArea .comInfo ul li .comInner .comDetail .dateArea{font-size:10px;color:var(--color-txt1)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -200,11 +241,11 @@ input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:activ
         /* join */
 
         /* join - profile */
-        .userImg{margin:0 0 30px;text-align: center;display: block;}
-        .userImg label{display: inline-block;position: relative;}
-        .userImg label::after{content:"";display: block;position: absolute;right:0;bottom:0;width:36px;height:36px;background: url(../img/upload-file.png) no-repeat 50% /cover;}
-        .userImg input{display: none;}
-        .userImg label img{width:110px;height:110px;border-radius: 50%;overflow: hidden;display: block;}
+        .customForm .userImg{margin:0 0 30px;text-align: center;display: block;}
+        .customForm .userImg label{display: inline-block;position: relative;}
+        .customForm .userImg label::after{content:"";display: block;position: absolute;right:0;bottom:0;width:36px;height:36px;background: url(../img/upload-file.png) no-repeat 50% /cover;}
+        .customForm .userImg input{display: none;}
+        .customForm .userImg label img{width:110px;height:110px;border-radius: 50%;overflow: hidden;display: block;}
 
     /* -------------------------------------------------------------------- profile */
         /* profile */
@@ -217,22 +258,44 @@ input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:activ
         #profileList .proSec + .proSec{margin-top:5px;border-top:1px solid var(--color-txt4)}
 
         #profileList .profileIntro{padding:30px 15px 25px;}
+        #profileList .profileIntro > ul{display: flex;;align-items: center;justify-content: center;}
+        #profileList .profileIntro > ul.infoRelation{justify-content: space-between;margin:0 auto 15px;position: relative;min-height: 110px;max-width:295px;padding:0 15px;}
+        #profileList .profileIntro > ul.infoRelation li{font-size:10px;color: var(--color-txt1);text-align: center;}
+        #profileList .profileIntro > ul.infoRelation li a{font-size:18px;font-weight: 700;}
+        #profileList .profileIntro > ul.infoRelation li.followers a{color:black;}
+        #profileList .profileIntro > ul.infoRelation li p{margin-top:5px;}
+        #profileList .profileIntro > ul.infoRelation li.userImg{position: absolute;left:50%;top:50%;transform: translate(-50%,-50%);}
+        #profileList .profileIntro > ul.infoRelation li.userImg img{width:110px;height:110px;border-radius: 50%;display: block;}
 
+        #profileList .profileIntro > ul.infoUser{flex-direction: column;margin-bottom:25px;}
+        #profileList .profileIntro > ul.infoUser li.userName{font-weight: 700;font-size:16px;color:black;margin-bottom:5px;}
+        #profileList .profileIntro > ul.infoUser li.userId{font-size:12px;color:var(--color-txt1);margin-bottom:15px;}
+        #profileList .profileIntro > ul.infoUser li.userIntro{font-size:14px;color:var(--color-txt1);line-height: 1.3;word-break: keep-all;text-align: center;}
 
-
-
-
-
+        #profileList .profileIntro > ul.infoTab{}
+        #profileList .profileIntro > ul.infoTab li{display: flex;align-items: center;justify-content: center;}
+        #profileList .profileIntro > ul.infoTab li .btnCustom{margin:0 10px;}
+        #profileList .profileIntro > ul.infoTab li .chat,
+        #profileList .profileIntro > ul.infoTab li .share{width:34px;height:34px;border:1px solid var(--color-txt4);display: flex;align-items: center;justify-content: center;border-radius: 50%;}
+        #profileList .profileIntro > ul.infoTab li .chat img{width:20px;}
+        #profileList .profileIntro > ul.infoTab li.manager a{padding:0;margin:0 6px}
+        #profileList .profileIntro > ul.infoTab li.manager .editProfile{width:120px;}
+        #profileList .profileIntro > ul.infoTab li.manager .editPrd{width:100px;}
+        #profileList.member .profileIntro > ul.infoTab li.manager{display:none;}
+        #profileList.manager .profileIntro > ul.infoTab li.manager{display:flex;}
+        #profileList.manager .profileIntro > ul.infoTab li.member{display:none;}
 
         /* prdList */
-        #profileList .profilePrd{padding:20px 15px;}
-
-
-
-
-
-
-
+        #profileList .profilePrd{padding:20px 0 7px;}
+        #profileList .profilePrd h3{font-size:16px;color:black;font-weight: 700;margin-bottom:15px;padding:0 15px}
+        #profileList .profilePrd ul{display: flex;align-items: flex-start;justify-content: left;width:100%;padding:0 15px 13px;overflow-x: auto;}
+        #profileList .profilePrd ul li{width:140px;flex-shrink: 0;}
+        #profileList .profilePrd ul li .prdThumb{margin:0 0 7px}
+        #profileList .profilePrd ul li .prdThumb img{border-radius: 8px;display: block;}
+        #profileList .profilePrd ul li .prdName{margin:0 0 4px;display:-webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;text-overflow: ellipsis;overflow: hidden;font-size:14px;color:black;}
+        #profileList .profilePrd ul li .prdPrice{font-size:12px;color:var(--color-primary);font-weight: 700;}
+        #profileList .profilePrd ul li .prdPrice span{font-weight: 700;}
+        #profileList .profilePrd ul li + li{margin-left:10px;}
 
         /* boardList */
         #profileList .profileBoard .boardTab{height:44px;display: flex;align-items: center;justify-content: right;padding:0 15px;border-bottom:0.5px solid var(--color-txt4)}
@@ -243,20 +306,50 @@ input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:activ
         #profileList .profileBoard .boardTab li.active img.on{display: block;;}
         #profileList .profileBoard .boardTab li.active img.off{display: none;;}
 
-        #profileList .profileBoard .boardDetail > li{padding:20px 15px;}
+        #feedList{height:calc(100dvh - 108px);overflow-y: auto;}
+        #feedList .list > ul{padding:10px 0}
+        #feedList .list > ul > li{padding:10px 15px;background: white;}
+        #boardDetail #feedList,
+        .profileBoard #feedList{height:auto;}
+        .profileBoard #feedList .list > ul{padding:5px 0;}
+        
+        #feedList .list > ul > li .feedInner{display: flex;}
+        #feedList .list > ul > li .feedInner .myThumbImg{flex-shrink: 0;margin-right:10px;}
+        #feedList .list > ul > li .feedInner .myThumbImg img{width:42px;height:42px;border-radius: 50%;overflow: hidden;display: block;}
 
+        #feedList .list > ul > li .feedInner .uploadDetail{overflow:hidden;width:100%;}
+        #feedList .list > ul > li .feedInner .uploadDetail .userArea{display:flex;align-items: flex-start;justify-content: space-between;}
+        #feedList .list > ul > li .feedInner .uploadDetail .userArea .userName{font-weight: 500;font-size:14px;color:black;line-height: 1.3;padding:0 0 3px}
+        #feedList .list > ul > li .feedInner .uploadDetail .userArea .userId{font-size:12px;color:var(--color-txt1);;}
+        #feedList .list > ul > li .feedInner .uploadDetail .userArea .moreInfo{flex-shrink: 0;position:relative;right:-2px;}
 
+        #feedList .list > ul > li .feedInner .uploadDetail .txtArea{padding:15px 0;font-size:14px;color:black;line-height: 1.4;;border:none;width:auto;}
 
-
-
-
-
-
-
-
-
-
-
+        #feedList .list > ul > li .feedInner .uploadDetail .imgArea{overflow: hidden;}
+        #feedList .list > ul > li .feedInner .uploadDetail .imgArea ul{overflow-x: auto;display:flex;flex-direction: column;padding:0 0 15px}
+        #feedList .list > ul > li .feedInner .uploadDetail .imgArea ul li{flex:1;height:100%;;}
+        #feedList .list > ul > li .feedInner .uploadDetail .imgArea ul li + li{margin-top:8px;}
+        #feedList .list > ul > li .feedInner .uploadDetail .imgArea ul li div > img{border-radius: 10px;width:100%;display: block;border:0.5px solid var(--color-txt4)}
+        
+        #feedList .list > ul > li .feedInner .uploadDetail .iconArea{padding:0 0 15px;}
+        #feedList .list > ul > li .feedInner .uploadDetail .iconArea ul{display: flex;align-items: center;}
+        #feedList .list > ul > li .feedInner .uploadDetail .iconArea ul li,
+        #feedList .list > ul > li .feedInner .uploadDetail .iconArea ul li a{display:flex;align-items: center;;}
+        #feedList .list > ul > li .feedInner .uploadDetail .iconArea ul li span{width:20px;height:20px;}
+        #feedList .list > ul > li .feedInner .uploadDetail .iconArea ul li strong{margin-left: 5px;font-size: 12px;color:var(--color-txt1);}
+        #feedList .list > ul > li .feedInner .uploadDetail .iconArea ul li + li{margin-left: 15px;}
+        #feedList .list > ul > li .feedInner .uploadDetail .iconArea ul li.like .iconLiked{display:none;}
+        #feedList .list > ul > li .feedInner .uploadDetail .iconArea ul li.like.active .iconLike{display:none;}
+        #feedList .list > ul > li .feedInner .uploadDetail .iconArea ul li.like.active .iconLiked{display:block;}
+        
+        #feedList .list > ul > li .feedInner .uploadDetail .dateArea{font-size:10px;color:var(--color-txt1)}
+        
+        #profileList .profileBoard .boardDetail .album > ul{display: flex;flex-wrap: wrap;}
+        #profileList .profileBoard .boardDetail .album > ul > li{margin:0 8px 8px 0;width:calc((100% - 16px) / 3)}
+        #profileList .profileBoard .boardDetail .album > ul > li:nth-child(3n){margin:0 0 8px}
+        #profileList .profileBoard .boardDetail .album > ul > li.morePic a{position: relative;}
+        #profileList .profileBoard .boardDetail .album > ul > li.morePic a::after{content:"";display:block;position: absolute;top:5px;right:5px;width:20px;height:20px;background:url(../img/icon/iccon-img-layers.svg) no-repeat 50% /cover;}
+        #profileList .profileBoard .boardDetail .album > ul > li img{display: block;}
 
         /* follow */
         #followList{padding:0 15px;overflow-y: auto;max-height: calc(100dvh - 108px);}

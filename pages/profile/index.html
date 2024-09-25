@@ -14,27 +14,198 @@
     </header>
 
     <div id="contents">
-        <div id="profileList">
+        <div id="profileList" class="member">
+            <!-- user profile -->
             <div class="profileIntro proSec">
-                <div class="ddd" style="height:300px">프로필 소개</div>
+                <ul class="infoRelation">
+                    <li class="followers">
+                        <a href="./follow.html">9876</a>
+                        <p>followers</p>
+                    </li>
+                    <li class="userImg"><img src="../../img/basic-profile-img.png" alt="user profile img"></li>
+                    <li class="followings">
+                        <a href="./follow.html">123</a>
+                        <p>followings</p>
+                    </li>
+                </ul>
+                <ul class="infoUser">
+                    <li class="userName">공공 장장 공장장</li>
+                    <li class="userId">@ <span>ruby_kim210</span></li>
+                    <li class="userIntro">유저 소개가 노출 됩니다. 수정 가능가능</li>
+                </ul>
+                <ul class="infoTab">
+                    <li class="member">
+                        <a href="../chat/chat.html" class="chat"><img src="../../img/icon/icon-message-circle.png" alt="chat icon"></a>
+                        <button class="btnCustom btnM">팔로우</button>
+                        <a href="javascript:;" class="share"><img src="../../img/icon/icon-share.png" alt="share icon"></a>
+                    </li>
+                    <li class="manager">
+                        <a href="./profileModify.html" class="btnCustom btnM btnCancle editProfile">프로필 수정</a>
+                        <a href="../product/prdUpload.html" class="btnCustom btnM btnCancle editPrd">상품 등록</a>
+                    </li>
+                </ul>
             </div>
+
+            <!-- user product -->
             <div class="profilePrd proSec">
-                <div class="ddd" style="height:200px">판매중인상품</div>
+                <h3>판매 중인 상품</h3>
+                <ul class="prdList">
+                    <li>
+                        <a href="#none">
+                            <div class="prdThumb"><img src="../../img/product-img-example.png" alt="product thumb"></div>
+                            <div class="prdName">감귤 왕감귤 10kg 파치 파치</div>
+                            <p class="prdPrice"><span>35,000</span>원</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <div class="prdThumb"><img src="../../img/product-img-example.png" alt="product thumb"></div>
+                            <div class="prdName">감귤 왕감귤 10kg 파치 파치</div>
+                            <p class="prdPrice"><span>35,000</span>원</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <div class="prdThumb"><img src="../../img/product-img-example.png" alt="product thumb"></div>
+                            <div class="prdName">감귤 왕감귤 10kg 파치 파치</div>
+                            <p class="prdPrice"><span>35,000</span>원</p>
+                        </a>
+                    </li>
+                </ul>
             </div>
+
+            <!-- user board -->
             <div class="profileBoard proSec">
                 <div class="boardWrap">
                     <ul class="boardTab">
                         <li class="active list"><img src="../../img/icon/icon-post-list-off.png" alt="list" class="off"><img src="../../img/icon/icon-post-list-on.png" alt="list" class="on"></li>
                         <li class="album"><img src="../../img/icon/icon-post-album-off.png" alt="gallery" class="off"><img src="../../img/icon/icon-post-album-on.png" alt="gallery" class="on"></li>
                     </ul>
-                    <ul class="boardDetail">
-                        <li>
-                            <div class="ddd" style="height:300px">게시물1</div>
-                        </li>
-                        <li>
-                            <div class="ddd" style="height:300px">게시물2</div>
-                        </li>
-                    </ul>
+                    <div id="feedList" class="boardDetail">
+                        <!-- post list -->
+                        <div class="list">
+                            <ul>
+                                <li>
+                                    <div class="feedInner">
+                                        <div class="myThumbImg">
+                                            <a href="../../pages/profile/index.html"><img src="../../img/Ellipse 6.png" alt="my profile img"></a>
+                                        </div>
+                                        <div class="uploadDetail">
+                                            <div class="userArea">
+                                                <a href="../../pages/profile/index.html">
+                                                    <div class="userName">한라봉 공장장 농장장장</div>
+                                                    <div class="userId">@ <span>ruby_kim210</span></div>
+                                                </a>
+                                                <div class="moreInfo"><img src="../../img/icon/s-icon-more-vertical.png" alt="more info"></div>
+                                            </div>
+                                            <p class="txtArea">
+                                                사용자 간의 자유로운 의사소통과 정보 공유, 그리고 인맥 확대 등을 통해 사회적 관계를 생성하고 강화해주는 온라인 플랫폼을 의미한다.
+                                            </p>
+                                            <!-- <div class="imgArea"></div> -->
+                                            <div class="iconArea">
+                                                <ul>
+                                                    <li class="like">
+                                                        <span><img src="../../img/icon/icon-heart.png" alt="like" class="iconLike"><img src="../../img/icon/icon-heart-active.png" alt="like" class="iconLiked"></span>
+                                                        <strong>9876</strong>
+                                                    </li>
+                                                    <li class="comment">
+                                                        <a href="../../pages/board/boardDetail.html">
+                                                            <span><img src="../../img/icon/icon-message-circle.svg" alt="iconComment"></span>
+                                                            <strong>12</strong>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="dateArea">
+                                                <span class="year">2024</span>년 <span class="month">10</span>월 <span class="day">24</span>일
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feedInner">
+                                        <div class="myThumbImg">
+                                            <a href="../../pages/profile/index.html"><img src="../../img/Ellipse 6.png" alt="my profile img"></a>
+                                        </div>
+                                        <div class="uploadDetail">
+                                            <div class="userArea">
+                                                <a href="../../pages/profile/index.html">
+                                                    <div class="userName">감귤주스</div>
+                                                    <div class="userId">@ <span>ruby_kim210</span></div>
+                                                </a>
+                                                <div class="moreInfo"><img src="../../img/icon/s-icon-more-vertical.png" alt="more info"></div>
+                                            </div>
+                                            <p class="txtArea">
+                                                사용자 간의 자유로운 플랫폼을 의미한다.
+                                            </p>
+                                            <div class="imgArea">
+                                                <a href="../board/boardDetail.html">
+                                                    <ul>
+                                                        <li>
+                                                            <div><img src="../../img/product-img-example.png" alt="board upload img"></div>
+                                                        </li>
+                                                        <li>
+                                                            <div><img src="../../img/post-img-example.png" alt="board upload img"></div>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </div>
+                                            <div class="iconArea">
+                                                <ul>
+                                                    <li class="like">
+                                                        <span><img src="../../img/icon/icon-heart.png" alt="like" class="iconLike"><img src="../../img/icon/icon-heart-active.png" alt="like" class="iconLiked"></span>
+                                                        <strong>9876</strong>
+                                                    </li>
+                                                    <li class="comment">
+                                                        <a href="../../pages/board/boardDetail.html">
+                                                            <span><img src="../../img/icon/icon-message-circle.svg" alt="iconComment"></span>
+                                                            <strong>12</strong>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="dateArea">
+                                                <span class="year">2024</span>년 <span class="month">10</span>월 <span class="day">24</span>일
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- post album -->
+                        <div class="album displaynone">
+                            <ul>
+                                <li>
+                                    <a href="../board/boardDetail.html"><img src="../../img/chat-exapmle.png" alt="post thumb"></a>
+                                </li>
+                                <li class="morePic">
+                                    <a href="../board/boardDetail.html"><img src="../../img/chat-exapmle.png" alt="post thumb"></a>
+                                </li>
+                                <li>
+                                    <a href="../board/boardDetail.html"><img src="../../img/chat-exapmle.png" alt="post thumb"></a>
+                                </li>
+                                <li class="morePic">
+                                    <a href="../board/boardDetail.html"><img src="../../img/chat-exapmle.png" alt="post thumb"></a>
+                                </li>
+                                <li>
+                                    <a href="../board/boardDetail.html"><img src="../../img/chat-exapmle.png" alt="post thumb"></a>
+                                </li>
+                                <li>
+                                    <a href="../board/boardDetail.html"><img src="../../img/chat-exapmle.png" alt="post thumb"></a>
+                                </li>
+                                <li>
+                                    <a href="../board/boardDetail.html"><img src="../../img/chat-exapmle.png" alt="post thumb"></a>
+                                </li>
+                                <li class="morePic">
+                                    <a href="../board/boardDetail.html"><img src="../../img/chat-exapmle.png" alt="post thumb"></a>
+                                </li>
+                                <li>
+                                    <a href="../board/boardDetail.html"><img src="../../img/chat-exapmle.png" alt="post thumb"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
