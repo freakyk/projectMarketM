@@ -1,6 +1,8 @@
-if(document.querySelector("#splash")){
-    setTimeout(function(){
-        // document.querySelector("#splash").classList.add('displaynone');
-        document.querySelector("#splash").remove();
-    }, 1400)
-}
+// load splash animation after dom loaded
+document.addEventListener('DOMContentLoaded', () => {
+    if(document.querySelector("#splash")){
+        setTimeout(function(){
+            document.querySelector("#splash").remove();
+        }, 1400)
+    }
+});

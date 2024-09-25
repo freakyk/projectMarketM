@@ -5,19 +5,15 @@ class TabMenu extends HTMLElement {
     }
     connectedCallback() {
         let imgSrc = "/projectMarketM/"
-        console.log(location.pathname)
+        // console.log(location.pathname)
         if(location.pathname == "/projectMarketM/" || location.pathname == "/projectMarketM/index.html"){
-            // imgSrc = "./";
             this.shadowRoot.innerHTML = tabSrc(imgSrc, "active");
         }else if(location.pathname == "/projectMarketM/pages/chat/chatList.html"){
-            // imgSrc = "../../";
             this.shadowRoot.innerHTML = tabSrc(imgSrc,"","active");
         }else if(location.pathname == "/projectMarketM/pages/profile/follow.html" || location.pathname == "/projectMarketM/pages/profile/index.html"){
             // 관리자, 회원, 비회원 쪼개기
-            // imgSrc = "../../";
             this.shadowRoot.innerHTML = tabSrc(imgSrc,"","","","active");
         }else{
-            // imgSrc = "../../";
             this.shadowRoot.innerHTML = tabSrc(imgSrc, "active");
         }
     }

@@ -67,8 +67,7 @@ input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:activ
     }
     @keyframes splashImg{
         20% {opacity:1;transform:translateY(2px);;}
-        35% {opacity:1;transform:translateY(0);;}
-        100% {opacity:1;transform:translateY(0);;}
+        35%, 100% {opacity:1;transform:translateY(0);;}
     }
 
     /* page404 */
@@ -122,7 +121,6 @@ input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:activ
         #boardDetail #feedList .list .imgArea{position:relative;margin:0 0 15px;}
         #boardDetail #feedList .list .imgArea ul{flex-direction: initial;padding:0;overflow: hidden;overflow:initial;align-items: baseline;}
         #boardDetail #feedList .list .imgArea ul > li{height:auto;flex:none;margin:0;}
-        #boardDetail #feedList .list .imgArea ul > li div > img{border:none;}
         #boardDetail #feedList .list .imgArea .postPag{position: absolute;left:50%;bottom:10px;top:auto;transform: translateX(-50%);z-index: 1;display:flex;align-items: center;justify-content: center;padding:0;}
         #boardDetail #feedList .list .imgArea .postPag span{opacity:1;margin:0 3px;width:6px;height:6px;border-radius: 50%;background:white;transition: 0.1s;}
         #boardDetail #feedList .list .imgArea .postPag span.swiper-pagination-bullet-active{background: var(--color-primary);}
@@ -145,32 +143,6 @@ input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:activ
         #boardDetail .boardArea .comInfo ul li .comInner .comDetail .userArea .moreInfo img{width:20px;}
         #boardDetail .boardArea .comInfo ul li .comInner .comDetail .txtArea{padding:15px 10px 0 0;font-size:14px;color:black;line-height: 1.4;;border:none;width:auto;}
         #boardDetail .boardArea .comInfo ul li .comInner .comDetail .dateArea{font-size:10px;color:var(--color-txt1)}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         #boardDetail .commentArea{position: fixed;left:0;bottom:0;width:100%;height:60px;z-index: 99;background:white;border-top: 1px solid var(--color-txt4);overflow: hidden;display: flex;align-items: center;}
         #boardDetail .commentArea .comfile{padding:0 15px;flex-shrink: 0;}
@@ -410,14 +382,68 @@ input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:activ
         #chatDetail .sendArea .sendTxt::placeholder,
         #chatDetail .sendArea .btnSend:disabled{color: var(--color-txt3);}
 
+/* custom modal */
+#customModal{position: fixed;left:0;top:0;width:100%;height:100%;z-index: 1000;background: rgba(0,0,0,0.1);display:none;}
+#customModal #modalWrap{background:white;width:100%;border-radius: 10px 10px 0 0;z-index: 1;position: absolute;left:50%;bottom:0;transform: translateX(-50%);}
+#customModal #modalWrap .close{height:35px;position: relative;}
+#customModal #modalWrap .close::after{content:"";display:block;width:50px;height:4px;border-radius: 5px;background: var(--color-txt4);position: absolute;left:50%;top:50%;transform: translate(-50%,-50%);}
+#customModal #modalWrap > ul{display:flex;flex-direction: column;padding:0 0 10px;}
+#customModal #modalWrap > ul > li a{display:flex;align-items: center;padding:15px 25px;font-size:14px;color:black;}
 
+#modalWrap > ul > li.menu{display: none;}
 
+    /* 상품 */
+        /* user */
+        #modalWrap.product > ul > li.delete,
+        #modalWrap.product > ul > li.edit,
+        #modalWrap.product > ul > li.showPrd{display: block;}
+        
+    /* 게시물 */
+        /* user */
+        #modalWrap.board > ul > li.reportSpam{display: block;}
+        /* manager */
+        #modalWrap.board.manager > ul > li.delete,
+        #modalWrap.board.manager > ul > li.edit{display: block;}
+        #modalWrap.board.manager > ul > li.reportSpam{display: none;}
+        
+    /* 게시물 댓글 */
+        /* user */
+        #modalWrap.comment > ul > li.reportSpam{display: block;}
+        /* manager */
+        #modalWrap.comment.manager > ul > li.delete{display: block;}
+        #modalWrap.comment.manager > ul > li.reportSpam{display: none;}
 
+    /* 채팅 */
+        /* manager */
+        #modalWrap.chat > ul > li.chatOut{display: block;}
 
+    /* 헤더 */
+        /* user */
+        #modalWrap.option > ul > li.optionInfo,
+        #modalWrap.option > ul > li.logout{display: block;}
 
+/* custom alert */
+#customAlert{position: fixed;top:50%;left:50%;transform: translate(-50%,-50%);z-index:1001 ;background: white;width:250px;height:110px;border-radius: 10px;overflow: hidden;display: none;}
+#customAlert .alertMessage{height:65px;display: flex;align-items: center;justify-content: center;}
+#customAlert .alertMessage > span{font-size:16px;font-weight: 500;color:black;display: none;}
+#customAlert .btnArea{height:45px;display: flex;align-items: center;border-top:1px solid var(--color-txt4)}
+#customAlert .btnArea button{flex:1;border:none;font-size:14px;color:black;background:white;height:100%;display: flex;align-items: center;justify-content: center;}
+#customAlert .btnArea button + button{border-left:1px solid var(--color-txt4)}
+#customAlert .btnArea button > span{display:none;color:var(--color-primary)}
 
+    /* 로그아웃 */
+    #customAlert.logout .alertMessage > span.logout,
+    #customAlert.logout .btnArea button > span.logout{display:block;}
 
+    /* 상품삭제 */
+    #customAlert.delete.prd .alertMessage > span.prd,
+    #customAlert.delete.prd .btnArea button > span.delete{display:block;}
+    
+    /* 게시물삭제 */
+    #customAlert.delete.board .alertMessage > span.board,
+    #customAlert.delete.board .btnArea button > span.delete{display:block;}
 
-
-
+    /* 신고하기 */
+    #customAlert.report .alertMessage > span.report,
+    #customAlert.report .btnArea button > span.report{display:block;}
     
