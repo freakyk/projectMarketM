@@ -26,6 +26,7 @@ body{min-width: 320px;}
 
 .pd35{padding:0 35px;}
 
+textarea:focus, textarea:focus-visible, textarea:focus-within, textarea:active,
 input:focus, input:focus-visible, input:focus-within, input:active{outline: none;}
 input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:active {
     -webkit-text-fill-color: #000;
@@ -66,8 +67,8 @@ input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:activ
         100% {opacity:0;}
     }
     @keyframes splashImg{
-        20% {opacity:1;transform:translateY(2px);;}
-        35%, 100% {opacity:1;transform:translateY(0);;}
+        20% {opacity:1;transform:translateY(2px);}
+        35%, 100% {opacity:1;transform:translateY(0);}
     }
 
     /* page404 */
@@ -99,7 +100,7 @@ input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:activ
         .boardUpload .myThumbImg{flex-shrink: 0;margin-right:10px;}
         .boardUpload .myThumbImg img{width:42px;height:42px;border-radius: 50%;overflow: hidden;display: block;}
         .boardUpload .uploadDetail{overflow:hidden;}
-        .boardUpload .uploadDetail .txtArea{padding:10px 15px 15px 0;font-size:14px;color:black;line-height: 1.4;;border:none;width:auto;}
+        .boardUpload .uploadDetail .txtArea{padding:10px 15px 0 0;font-size:14px;color:black;line-height: 1.4;;border:none;width:100%;margin: 0 0 15px;height: auto;}
         .boardUpload .uploadDetail .txtArea::placeholder{color:var(--color-txt3)}
 
         .boardUpload .uploadDetail .imgArea{overflow: hidden;}
@@ -167,6 +168,13 @@ input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:activ
         /* login */
         .log #contents{background: var(--color-primary-bg);}
         .logWrap .logo{height:calc(100dvh - 320px);display: flex;align-items: center;justify-content: center;}
+        .logWrap .logo img{animation: bounce 1.5s ease-out alternate infinite;}
+        @keyframes bounce {
+            0% {transform:translateY(10px) rotate(4deg);}
+            20% {transform:translateY(-3px) rotate(0);}
+            80% {transform:translateY(4px) rotate(-2deg);}
+            60%, 100% {transform:translateY(0) rotate(0);}
+          }
 
         .logWrap .logArea{background: white;min-height: 320px;border-radius: 20px 20px 0 0;position: fixed;left:0;bottom:0;z-index: 1;width: 100%;padding:50px 35px 0}
 
@@ -358,7 +366,8 @@ input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:activ
         #header.chat.detail .back a{flex-shrink: 0;}
         #header.chat.detail h2{display:-webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;text-overflow: ellipsis;overflow: hidden;}
 
-        #chatDetail .chatArea{background: #f2f2f2;height:calc(100dvh - 108px);display: flex;align-items: flex-end;}
+        #chatDetail{padding:0 0 60px;height:calc(100vh - 48px);background: #f2f2f2;_transition: 0.2s;}
+        #chatDetail .chatArea{height:calc(100vh - 108px);display: flex;align-items: flex-start;}
         #chatDetail ul{display: flex;flex-direction: column;;overflow-y: auto;max-height: 100%;width:100%;padding:20px 15px 10px;}
         #chatDetail ul li{display:flex;margin-bottom:10px;}
         #chatDetail ul li img{display:block;max-width: 240px;border-radius: 10px;}
@@ -377,7 +386,7 @@ input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:activ
         #chatDetail .sendArea .sendfile{padding:0 15px;flex-shrink: 0;}
         #chatDetail .sendArea .sendfile input{display: none;}
         #chatDetail .sendArea .sendfile img{width:36px;height:36px;display:block;}
-        #chatDetail .sendArea .sendTxt{border:none;height:100%;width:-webkit-fill-available;background: white;width:-moz-available}
+        #chatDetail .sendArea .sendTxt{border:none;_height:calc(100% - 20px);width:-webkit-fill-available;background: white;width:-moz-available;max-height:34px;resize: none;}
         #chatDetail .sendArea .btnSend{border:none;background: none;color:var(--color-primary);font-weight: 500;font-size:14px;padding:15px;;flex-shrink: 0;}
         #chatDetail .sendArea .sendTxt::placeholder,
         #chatDetail .sendArea .btnSend:disabled{color: var(--color-txt3);}
@@ -391,7 +400,6 @@ input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:activ
 #customModal #modalWrap > ul > li a{display:flex;align-items: center;padding:15px 25px;font-size:14px;color:black;}
 
 #modalWrap > ul > li.menu{display: none;}
-
     /* 상품 */
         /* user */
         #modalWrap.product > ul > li.delete,
