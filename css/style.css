@@ -148,7 +148,7 @@ input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:activ
         #boardDetail .commentArea{position: fixed;left:0;bottom:0;width:100%;height:60px;z-index: 99;background:white;border-top: 1px solid var(--color-txt4);overflow: hidden;display: flex;align-items: center;}
         #boardDetail .commentArea .comfile{padding:0 15px;flex-shrink: 0;}
         #boardDetail .commentArea .comfile img{width:36px;height:36px;display:block;}
-        #boardDetail .commentArea .commentTxt{border:none;height:100%;width:-webkit-fill-available;background: white;width:-moz-available}
+        #boardDetail .commentArea .commentTxt{border:none;width:-webkit-fill-available;background: white;width:-moz-available;;max-height:34px;resize: none;}
         #boardDetail .commentArea .btnSend{border:none;background: none;color:var(--color-primary);font-weight: 500;font-size:14px;padding:15px;;flex-shrink: 0;}
         #boardDetail .commentArea .commentTxt::placeholder,
         #boardDetail .commentArea .btnSend:disabled{color: var(--color-txt3);}
@@ -386,7 +386,7 @@ input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:activ
         #chatDetail .sendArea .sendfile{padding:0 15px;flex-shrink: 0;}
         #chatDetail .sendArea .sendfile input{display: none;}
         #chatDetail .sendArea .sendfile img{width:36px;height:36px;display:block;}
-        #chatDetail .sendArea .sendTxt{border:none;_height:calc(100% - 20px);width:-webkit-fill-available;background: white;width:-moz-available;max-height:34px;resize: none;}
+        #chatDetail .sendArea .sendTxt{border:none;width:-webkit-fill-available;background: white;width:-moz-available;max-height:34px;resize: none;}
         #chatDetail .sendArea .btnSend{border:none;background: none;color:var(--color-primary);font-weight: 500;font-size:14px;padding:15px;;flex-shrink: 0;}
         #chatDetail .sendArea .sendTxt::placeholder,
         #chatDetail .sendArea .btnSend:disabled{color: var(--color-txt3);}

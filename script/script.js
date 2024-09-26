@@ -22,3 +22,10 @@ if($textArea2){
         e.target.style.height = e.target.scrollHeight + "px";
     })
 }
+const $textArea3 = document.querySelector('#boardDetail .commentArea .commentTxt')
+if($textArea3){
+    $textArea3.addEventListener('input',function(e){
+        e.target.style.height = "17px";
+        e.target.style.height = e.target.scrollHeight + "px";
+    })
+}
