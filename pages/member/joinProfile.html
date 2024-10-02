@@ -15,7 +15,7 @@
             </div>
 
             <!-- 회원가입폼 -->
-            <div class="joinForm customForm pd35">
+            <div id="joinStep2" class="joinForm customForm pd35">
                 <div class="userImg">
                     <label for="userimg">
                         <input type="file" name="userimg" id="userimg">
@@ -24,21 +24,22 @@
                 </div>
                 <label for="username" class="formlabel username">
                     사용자 이름
-                    <input type="text" name="username" id="username" placeholder="2~10자 이내여야 합니다.">
+                    <input type="text" name="username" id="username" data-true="false" placeholder="2~10자 이내여야 합니다.">
                 </label>
                 <label for="id" class="formlabel id">
                     계정 ID
-                    <input type="text" name="id" id="id" placeholder="영문, 숫자, 특수문자(.),(_)만 사용 가능합니다.">
+                    <input type="text" name="id" id="id" data-true="false" placeholder="영문, 숫자, 특수문자(.),(_)만 사용 가능합니다.">
                 </label>
                 <label for="intro" class="formlabel intro">
                     소개
                     <input type="text" name="intro" id="intro" placeholder="자신과 판매할 상품에 대해 소개해 주세요!">
                 </label>
-                <button class="btnL btnCustom" disabled>감귤마켓 시작하기</button>
+                <button class="btnL btnCustom btnJoin" disabled>감귤마켓 시작하기</button>
             </div>
         </div>
     </div>
 
-    <script src="../../script/script.js"></script>
+    <!-- <script src="../../script/script.js"></script> -->
+    <script src="./join.js"></script>
 </body>
 </html>
