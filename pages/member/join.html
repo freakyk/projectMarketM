@@ -15,20 +15,21 @@
             </div>
 
             <!-- 회원가입폼 -->
-            <div class="joinForm customForm pd35">
+            <div id="joinStep1" class="joinForm customForm pd35">
                 <label for="email" class="formlabel email">
                     이메일
-                    <input type="email" name="email" id="email" placeholder="이메일 주소를 입력해 주세요">
+                    <input type="email" name="email" id="email" data-true="false" placeholder="이메일 주소를 입력해 주세요">
                 </label>
                 <label for="pw" class="formlabel pw">
                     비밀번호
-                    <input type="password" name="pw" id="pw" placeholder="비밀번호를 설정해 주세요">
+                    <input type="password" name="pw" id="pw" data-true="false" placeholder="비밀번호를 설정해 주세요">
                 </label>
-                <button class="btnL btnCustom" disabled>다음</button>
+                <button class="btnL btnCustom btnNext" disabled>다음</button>
             </div>
         </div>
     </div>
 
-    <script src="../../script/script.js"></script>
+    <!-- <script src="../../script/script.js"></script> -->
+    <script src="./join.js"></script>
 </body>
 </html>

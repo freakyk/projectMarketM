@@ -16,7 +16,8 @@
 }
 *{margin:0;padding:0;box-sizing: border-box;font-weight: 400;font-family: 'Spoqa Han Sans Neo', 'sans-serif';-webkit-tap-highlight-color : transparent !important;}
 li{list-style: none;}
-a, a:focus{text-decoration: none;color:inherit;background: inherit;}
+a{text-decoration: none;color:inherit;background: inherit;}
+a:focus{outline: none;}
 img{max-width:100%;}
 
 /* custom ---------------------------------------- */
@@ -37,6 +38,7 @@ input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:activ
 
     /* btn */
     .btnCustom{border:1px solid var(--color-primary);color:white;background: var(--color-primary);border-radius: 25%;font-size:14px;font-weight: 500;padding:5px 10px;display: flex;align-items: center;justify-content: center;transition: 0.2s;width:fit-content}
+    .btnDisabled,
     .btnCustom:disabled{background: var(--color-primary-disabled);border-color: var(--color-primary-disabled);}
     .btnCancle{background:white;color: var(--color-txt1);border-color: var(--color-txt4);}
     .btnL{height:44px;padding:0 33px;border-radius: 44px;}
@@ -202,7 +204,7 @@ input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:activ
 
         .formlabel{display:block;font-weight: 500;font-size:12px;color:var(--color-txt1);}
         .formlabel + .formlabel{margin-top:15px;}
-        .formlabel input{display:block;border:none;border-bottom:1px solid var(--color-txt4);height:35px;overflow: hidden;font-size:14px;color:black;width:100%;transition: 0.15s;}
+        .formlabel input{display:block;border:none;border-bottom:1px solid var(--color-txt4);height:35px;overflow: hidden;font-size:14px;color:black;width:100%;transition: 0.1s;}
         .formlabel input[type="password"]{letter-spacing: 5px;}
         .formlabel input::placeholder{font-size:14px;color:var(--color-txt4);letter-spacing: normal;}
         .formlabel input:active,
@@ -212,7 +214,7 @@ input:autofill, input:autofill:hover, input:autofill:focus, input:autofill:activ
         .formlabel.warn input{outline:none;border-color: var(--color-warn);}
 
         .customForm p.logwarn,
-        .formlabel + p.warning{font-weight: 500;font-size:12px;color:var(--color-warn);margin-top:5px;}
+        .formlabel p.warning{font-weight: 500;font-size:12px;color:var(--color-warn);margin-top:5px;}
         .customForm p.logwarn{display: none;}
 
         .customForm .btnCustom{margin:30px auto 20px;width:100%;}
